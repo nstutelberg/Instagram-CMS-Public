@@ -76,18 +76,3 @@ async function main() {
   }
   
   main();
-
-//next steps
-//1. check how many seconds are left on the token and refresh it if its less than a few days
-    //going to use a serverless function that has one main that you can separate. 
-    //check out this link and set up an account: https://www.netlify.com/blog/2021/12/12/how-to-test-serverless-functions-locally/ and get a netlify local serverless function running
-    // https://app.netlify.com/sites/funny-babka-363433/functions
-    //create a new sity with netlify and run function locally, it will get a route to your localhost. netlify sets up a site for a git repo basically
-    //create 2 mains, one for an api call and one to refresh the token
-    //BIGGEST THING IS TO GET THIS WORKING WITH NETLIFY SO SEB CAN ACCESS WEBSITE AND HIT API CALL, AND ANOTHER PAGE TO RENEW TOKEN
-    //need to create a site with netlify and direct data to that site instead of console
-
-//where will the data go
-    //maybe the token and id information will go to redis to be stored
-    //maybe the api output will be on netlify site with a scheduled function
-
