@@ -1,46 +1,24 @@
 # JavaScript-Instagram-CMS
 
-javascript task
--Periodically pull in Instagram posts to our cms sanity.io from an arbitrary instagram account (content management system)
--scheduled/backgrounf function is used to run code at the same time every day. 
-	-background functions are better for batch processing, but scheduled jobs are better if task is going to be recurring]
--livenation is the client and they want us to pull in their posts from their new instagram page live_nation_venues 
--can test this CMS on a public instagram account - livenation...and then once I get that working locally, can integrate with codebase
+
+-Periodically pull in Instagram posts to our cms sanity.io from an arbitrary instagram account
+-scheduled/background function is used to run code at the same time every day. 
+	-background functions are better for batch processing, but scheduled jobs are better if task is going to be recurring
+-can test this CMS on a public instagram account - ..and then once I get that working locally, can integrate with codebase
 -might need to do something with instagram Oauth and their API since in order to pull data from their API you need authentication. 
 -BIG PROBLEM - when you generate a key the authentication runs out after about 60 days. We want to have a constant stream of information from instagram without the authentication running out. there are some limitations
 
-sanity - place to edit content. its a CMS that is sebs favorite. 
-		build fields in the cms using code / sanity studio. seb has a repo for sanity
+sanity - place to edit content. build fields in the cms using code / sanity studio. seb has a repo for sanity
 
 steps 
-1. find a public instagram account (livenation)
+1. find a public instagram account
 2. try to connect to that instagram and pull content from it and inject it into the CMS (sanity.io)
 	- want to store the post, the caption, the general information. not the analytics
 	- could create a site from this information
-	- try to get top 10 most recent instagram posts first as a starter point
+	- try to get top 10 most recent instagram posts
 	- need to pull data from instagram API and need to do OAUTH token to get that info
 		-https://rapidapi.com/blog/how-to-navigate-and-connect-to-instagrams-api/
 3. store the content on sanityIO
-	
-
-first easy step
-1. use above instagram link to get into api, make dev account, get oauth...then try to pull some instagram posts from a page and log the posts to the console. want to show that I have access to the posts
-2. then after that, can work with sanity to try to get that information into sanity
-
-	
-Questions
-
-	-is it for bean.la instagram or for a client? client
-
-	-what frequency do you want the scheduled functiont to run on? 
-
-	-don't I need a site to be able to view results?
-
-
-https://levelup.gitconnected.com/getting-started-with-the-instagram-basic-display-api-5124c92c4935
-
-
-
 
 
 
@@ -81,24 +59,6 @@ Send another request with this short-lived token to exchange it for a long-lived
 Send requests with this long-lived token to query the API for a user’s profile and media data.
 Send a request with this long-lived token to refresh the token, receiving back another token which is, once again, valid for the next 60 days.
 
-
-
-https://api.instagram.com/oauth/authorize
-  ?client_id=143737001962080
-  &redirect_uri=https://6af9-173-31-211-214.ngrok-free.app/
-  &scope=user_profile,user_media
-  &response_type=code
-
-https://api.instagram.com/oauth/authorize?client_id=143737001962080&redirect_uri=https://6af9-173-31-211-214.ngrok-free.app/&scope=user_profile,user_media&response_type=code
-authorization code: AQD710LzuiQCcEj6tczy6JOjPrNU48FDho2PbRS5hzIdL3ZkUeUAXuFchdhnJWYaV4QEp-ZxF7NeQ-hJxIsx5Tu0jRkWTSrropxjRyDmCU79h864C5oDGOqgt-fmpQ18egy0NF43kbc4mT5qLqCXNywZgbSZnYm9vVJ5qy2FWagU1aj1S8v_NizwNp3CsctrnglrDwJDR1NXt81o6DFGB3efVTkfsLfXP3j7HIsKTWUMTA#_
-
-curl -X POST \
-  https://api.instagram.com/oauth/access_token \
-  -F client_id=143737001962080
-  -F client_secret=8cc4d26a5b6d0a53fff49bb62776b04d
-  -F grant_type=authorization_code
-  -F redirect_uri=https://6af9-173-31-211-214.ngrok-free.app/
-  -F code=AQD710LzuiQCcEj6tczy6JOjPrNU48FDho2PbRS5hzIdL3ZkUeUAXuFchdhnJWYaV4QEp-ZxF7NeQ-hJxIsx5Tu0jRkWTSrropxjRyDmCU79h864C5oDGOqgt-fmpQ18egy0NF43kbc4mT5qLqCXNywZgbSZnYm9vVJ5qy2FWagU1aj1S8v_NizwNp3CsctrnglrDwJDR1NXt81o6DFGB3efVTkfsLfXP3j7HIsKTWUMTA#_
 
 
 site for api settings: https://developers.facebook.com/docs/instagram-basic-display-api/reference/media
