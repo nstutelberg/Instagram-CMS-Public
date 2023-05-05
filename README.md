@@ -1,6 +1,8 @@
 # JavaScript-Instagram-CMS
 
 Note: I removed any files that could contain token information because the files could be storing information that could invalidate my primary private repo. Files deleted include: package.json, 
+
+
 -Periodically pull in Instagram posts to our cms sanity.io from an arbitrary instagram account
 -scheduled/background function is used to run code at the same time every day. 
 	-background functions are better for batch processing, but scheduled jobs are better if task is going to be recurring
