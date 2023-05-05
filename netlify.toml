@@ -1,0 +1,10 @@
+[build]
+  #command = 'npm run build'
+  functions = "netlify/functions"
+  #publish = "build"
+
+[functions]
+  [functions.netlify-function]
+    id = "netlify-function"
+    path = "netlify/functions/netlify-function.js"
+    cron = ""

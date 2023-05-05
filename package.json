@@ -1,0 +1,22 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@netlify/functions": "^1.4.0",
+    "axios": "^1.3.5",
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^10.0.0",
+    "env": "^0.0.2",
+    "redis": "^4.6.6"
+  },
+  "scripts": {
+    "main_api_call": "node app_scripts/main_api_call.js",
+    "check_token_status": " node /app_scripts/check_token_status.js",
+    "create_sixty_day_token": "node /app_scripts/create_sixty_day_token.js",
+    "create_temporary_token": "node /app_scripts/create_temporary_token.js",
+    "main_token_creation": "node /app_scripts/main_token_creation.js",
+    "renew_token": "node /app_scripts/renew_token.js",
+    "request_instagram_data": "node /app_scripts/request_instagram_data.js",
+    "write_to_env_template": "node /app_scripts/write_to_env_template.js"
+  }
+}
