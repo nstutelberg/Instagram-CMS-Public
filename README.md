@@ -29,20 +29,16 @@ Steps taken
 1. I used the Instagram Basic Display API vs the Instagram Graph API since the graph one is for content creators and business owners. https://developers.facebook.com/docs/instagram-basic-display-api/. And we get all the info we need from the basic one
 	- no tokenization needed for public accounts. For a private account, there is a 60 days period until the token expires: https://developers.facebook.com/docs/instagram-basic-display-api/guides/long-lived-access-tokens
 	- refreshing a token is easy though, can make a script to request info from the API on a set schedule using the commands in the link above
-2. Installed Yarn and then created a Nuxt App with `yarn create nuxt-app nuxt-app`
-	- used Vuetify.js framework with HTML engine, and used Axios for promise based HTTP client. Since Instagram API requires that you make HTTP requests, have to go with this option for the Nuxt.js module
-	- used this link as a guide: https://rapidapi.com/blog/instagram-api-javascript/
-3. Created a facebook development account
+2. Created a facebook development account
 	- created an app with a "consumer" type vs none type..None type has permissions to everything but only consumer type can be used without setting up a business manager account on meta
-	-used this tutorial
 	-downloaded ngrok to create an http tunnel to my localhost page http://localhost:3000/
 	-in the git folder structure, ran ngrok.exe and executed:
-		-ngrok config add-authtoken 2OW7tult6YiwP5oM2ED5n1bIV7C_4fftTFR9huWQDikS7H6gs
+		-ngrok config add-authtoken 
 		-ngrok http 3000
 			-this adds authentication and then sets a redirect from https://6af9-173-31-211-214.ngrok-free.app to http://localhost:3000/
 	-created an app just for the instagram basic display api and have the codes and secretes to it. Link here: https://developers.facebook.com/apps/584537917073859/settings/advanced/
-		- Instagram App ID = 143737001962080
-		- Instagram App Secret = 8cc4d26a5b6d0a53fff49bb62776b04d
+		- Instagram App ID = 
+		- Instagram App Secret =
 4. set up Oauth on the facebook app
 	- in the app settings, don't need to specify specific links for the user to redirected to for Oauth redirect URL, callback URL and data deletion URL
 	- instead, I set the link for all 3 of these to https://httpstat.us/200 . This is a placeholder site so instagram can redirect here if needed.
