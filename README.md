@@ -1,6 +1,6 @@
 # JavaScript-Instagram-CMS
 
-Note: I removed any files that could contain token information because the files could be storing information that could invalidate my primary private repo. Files deleted include: package.json, 
+Note: I removed any files that could contain token information because the files could be storing information that could invalidate my primary private repo. Files deleted include: package.json, node_modules
 
 
 -Periodically pull in Instagram posts to our cms sanity.io from an arbitrary instagram account
