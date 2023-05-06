@@ -25,3 +25,4 @@ function envWriter(envVariableName, accessToken) {
         return null;
     }
 }
+
