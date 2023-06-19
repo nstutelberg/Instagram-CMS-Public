@@ -46,16 +46,17 @@ Steps taken
 
 
 Steps summarized
-Create a Facebook App and configure it to use the Instagram Basic Display API.
-Set up our app’s Valid OAuth Redirect URI so that we can successfully navigate through Instagram’s “Authorization Window.”
-Add an Instagram Tester, which is an Instagram account to which we have access. Then, as that Instagram user, accept the invitation to be a tester.
-Visit the URL for displaying Instagram’s “Authorization Window,” which asks an Instagram user to authorize an app to access that user’s Instagram profile and media data.
-Obtain the authorization code that is passed as a param to the OAuth Redirect URI after the user authorizes your app.
-Send an HTTP request (using Postman) with this authorization code to exchange it for a short-lived API token (which is valid for 1 hour).
-Take advantage of Postman’s variables to reuse values more easily across different requests.
-Send another request with this short-lived token to exchange it for a long-lived API token (which is valid for the next 60 days).
-Send requests with this long-lived token to query the API for a user’s profile and media data.
-Send a request with this long-lived token to refresh the token, receiving back another token which is, once again, valid for the next 60 days.
+
+		Create a Facebook App and configure it to use the Instagram Basic Display API.
+		Set up our app’s Valid OAuth Redirect URI so that we can successfully navigate through Instagram’s “Authorization Window.”
+		Add an Instagram Tester, which is an Instagram account to which we have access. Then, as that Instagram user, accept the invitation to be a tester.
+		Visit the URL for displaying Instagram’s “Authorization Window,” which asks an Instagram user to authorize an app to access that user’s Instagram profile and media data.
+		Obtain the authorization code that is passed as a param to the OAuth Redirect URI after the user authorizes your app.
+		Send an HTTP request (using Postman) with this authorization code to exchange it for a short-lived API token (which is valid for 1 hour).
+		Take advantage of Postman’s variables to reuse values more easily across different requests.
+		Send another request with this short-lived token to exchange it for a long-lived API token (which is valid for the next 60 days).
+		Send requests with this long-lived token to query the API for a user’s profile and media data.
+		Send a request with this long-lived token to refresh the token, receiving back another token which is, once again, valid for the next 60 days.
 
 
 
